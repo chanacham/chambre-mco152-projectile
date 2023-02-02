@@ -1,4 +1,4 @@
-package Chambre.Projectile;
+package chambre.projectile;
 
 public class Projectile {
     private final double angle;
@@ -6,11 +6,10 @@ public class Projectile {
     private final double radians;
     private double time;
 
-    public Projectile(double angle, double velocity, double time) {
+    public Projectile(double angle, double velocity) {
         this.angle = angle;
         this.velocity = velocity;
         this.radians = Math.toRadians(angle);
-        this.time = time;
     }
 
     public double getTime() {
@@ -34,7 +33,7 @@ public class Projectile {
     }
 
     public double getY() {
-        return Math.sin(radians) * velocity * time - 0.5 * 9.8 * Math.pow(time, 2);
+        return Math.sin(radians) * velocity * time - 0.5 * 9.8 * (time*time);
     }
 }
 

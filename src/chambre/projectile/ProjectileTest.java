@@ -1,4 +1,4 @@
-package Chambre.Projectile;
+package chambre.projectile;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,13 +8,8 @@ class ProjectileTest {
 
     @Test
     public void getX(){
-        //given
-        Projectile projectile = new Projectile(39, 77, 6);
-
-        //when
+        Projectile projectile = new Projectile(39, 77);
         double x = projectile.getX();
-
-        //then
         assertEquals(359.0414, x,0.0001);
     }
 
