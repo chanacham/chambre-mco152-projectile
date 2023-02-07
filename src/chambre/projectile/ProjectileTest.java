@@ -8,9 +8,20 @@ class ProjectileTest {
 
     @Test
     public void getX(){
-        Projectile projectile = new Projectile(39, 77);
-        double x = projectile.getX();
-        assertEquals(359.0414, x,0.0001);
+        Projectile xTest = new Projectile(45, 80);
+        xTest.incTime(1);
+        assertEquals(56.568542494923804, xTest.getX());
+        xTest.incTime(1);
+        assertEquals(113.13708498984761, xTest.getX());
+    }
+
+    @Test
+    public void getY(){
+        Projectile yTest = new Projectile(45, 80);
+        yTest.incTime(1);
+        assertEquals(51.6685424949238, yTest.getY());
+        yTest.incTime(1);
+        assertEquals(93.53708498984759, yTest.getY());
     }
 
 }

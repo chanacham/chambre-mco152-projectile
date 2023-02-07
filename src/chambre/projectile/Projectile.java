@@ -28,12 +28,10 @@ public class Projectile {
         return velocity;
     }
 
-    public double getX() {
-        return Math.cos(radians) * velocity * time;
-    }
+    public double getX() { return Math.cos(radians) * velocity * time; }
 
     public double getY() {
-        return Math.sin(radians) * velocity * time - 0.5 * 9.8 * (time*time);
+        return Math.sin(radians) * velocity * time - 0.5 * 9.8 * (time * time);
     }
 }
 
